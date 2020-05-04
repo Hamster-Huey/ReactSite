@@ -19,8 +19,8 @@ jobs:
       with:
         azure_pages_api_token: ${{ secrets.AZURE_PAGES_API_TOKEN }}
         action: 'upload --verbose'         
-        app_artifact_location: 'app'
-        api_artifact_location: 'api'
+        app_artifact_location: '/app'
+        api_artifact_location: '/api'
   
   azure_pages_close_pr_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
